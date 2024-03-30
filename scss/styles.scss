@@ -1,0 +1,48 @@
+// ========== Abstracts ========== //
+@import "abstracts/variables";
+@import "abstracts/mixins/mix-media";
+
+
+
+// ========== Base ========== //
+@import "base/reset";
+
+
+
+// ========== Base ========== //
+@import "components/search";
+
+
+
+// ========== Layouts ========== //
+@import "layout/navbar";
+
+
+
+// For Tablet Portrait
+@include for-leptop-portrait {
+  html {
+    font-size: 8px !important;
+  }
+}
+
+// For Tablet Portrait
+@include for-leptop-landscape {
+  html {
+    font-size: 8px !important;
+  }
+}
+
+// For Tablet Portrait
+@include for-tablet-portrait {
+  html {
+    font-size: 8px !important;
+  }
+}
+
+// For Tablet Phone Landscape
+@include for-tablet-landscape {
+  html {
+    font-size: 8px !important;
+  }
+}

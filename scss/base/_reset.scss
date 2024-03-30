@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $second-color;
+    overflow-x: hidden;
+    max-width: 100%;
+    background-color: #f8f8f8;
+}
+
+
+.container {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+label,
+span,
+div {
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}

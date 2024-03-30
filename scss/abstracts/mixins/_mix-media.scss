@@ -1,0 +1,93 @@
+// ==================================================== //
+// ==================== Responsive ==================== //
+// ==================================================== //
+
+// Leptop Portrait
+@mixin for-leptop-portrait {
+    @media screen and (max-aspect-ratio: 13/9) {
+        @media screen and (max-width: 1180px) {
+            @content;
+        }
+    }
+}
+
+// Leptop Landscape
+@mixin for-leptop-landscape {
+    @media screen and (min-aspect-ratio: 13/9) {
+        @media screen and (max-width: 1180px) {
+            @content;
+        }
+    }
+}
+
+// Tablet Portrait
+@mixin for-tablet-portrait {
+    @media screen and (max-aspect-ratio: 13/9) {
+        @media screen and (max-width: 991px) {
+            @content;
+        }
+    }
+}
+
+// Tablet Landscape
+@mixin for-tablet-landscape {
+    @media screen and (min-aspect-ratio: 13/9) {
+        @media screen and (max-width: 991px) {
+            @content;
+        }
+    }
+}
+
+// Medium Phone Portrait
+@mixin for-medium-phone-portrait {
+    @media screen and (max-aspect-ratio: 13/9) {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+}
+
+// Medium Phone Landscape
+@mixin for-medium-phone-landscape {
+    @media screen and (min-aspect-ratio: 13/9) {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+}
+
+// Small Phone Portrait
+@mixin for-small-phone-portrait {
+    @media screen and (max-aspect-ratio: 13/9) {
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    }
+}
+
+// Small Phone Landscape
+@mixin for-small-phone-landscape {
+    @media screen and (min-aspect-ratio: 13/9) {
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    }
+}
+
+// Extra Small Phone Portrait
+@mixin for-extra-small-phone-portrait {
+    @media screen and (max-aspect-ratio: 13/9) {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+}
+
+// Extra Small Phone Landscape
+@mixin for-extra-small-phone-landscape {
+    @media screen and (min-aspect-ratio: 13/9) {
+        @media screen and (max-width: 375px) {
+            @content;
+        }
+    }
+}
