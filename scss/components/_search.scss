@@ -7,9 +7,9 @@
     padding-bottom: 4rem;
 
     .search {
-        max-width: 70rem;
+        max-width: 80rem;
         width: 100%;
-        margin: 6rem auto 0 auto;
+        margin: 5rem auto 0 auto;
 
         .input-wrap {
             position: sticky;
@@ -17,7 +17,7 @@
 
 
             .input-search {
-                background-color: $white;
+                background-color: $white-color;
                 height: 7rem;
                 width: 100%;
                 border-radius: 1rem;
@@ -47,9 +47,9 @@
         }
 
         .search-result {
-            margin-top: 1rem;
-            background-color: $white;
-            padding: 4rem 2rem;
+            margin-top: 2rem;
+            background-color: $white-color;
+            padding: 2rem;
             border-radius: 1rem;
             border: solid 0.1rem #E8E8E8;
             width: 100%;
@@ -61,19 +61,91 @@
                 display: flex;
                 gap: 2rem;
 
-                img {
+                .movie-image {
+                    height: 100%;
                     width: 16rem;
+                    display: block;
+                    object-fit: cover;
                 }
 
                 .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4rem;
+
+                    .title {
+                        font-size: 2.4rem;
+                        font-weight: 500;
+
+                        .high-light {
+                            font-weight: 700;
+                            text-decoration: underline;
+                        }
+
+                        .rate-wrap {
+                            display: flex;
+                            gap: 1rem;
+                            align-items: center;
+
+                            .icon-start {
+                                fill: $white-color;
+                                height: 2rem;
+                                width: 2rem;
+                                cursor: pointer;
+                            }
+
+                            .rate {
+                                color: #c8c8c8;
+                                font-size: 1.4rem;
+                                font-weight: 400;
+
+                                .current-point {
+                                    color: $primary-color;
+                                    font-size: 2rem;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+
                     .info {
                         display: flex;
                         flex-direction: column;
                         gap: 4rem;
 
+
                         .row {
                             display: inline;
                             gap: 1rem;
+
+                            .feature {
+                                .key {
+                                    font-weight: 600;
+                                }
+                            }
+
+                            .link {
+                                color: $second-color;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .btn-watch-later {
+                        color: $primary-color;
+                        height: 4rem;
+                        width: 16rem;
+                        background-color: $white-color;
+                        border: none;
+                        border-radius: 0.6rem;
+                        font-weight: 600;
+                        border: solid 0.1rem $primary-color;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            background-color: $primary-color;
+                            color: $white-color;
                         }
                     }
                 }
@@ -84,6 +156,13 @@
                 width: 100%;
                 background-color: #E8E8E8;
                 border: none;
+            }
+
+            .more-results {
+                color: $primary-color;
+                text-align: center;
+                font-weight: 500;
+                cursor: pointer;
             }
         }
     }

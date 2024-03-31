@@ -97,9 +97,9 @@ img {
   padding-bottom: 4rem;
 }
 .search-wrap .search {
-  max-width: 70rem;
+  max-width: 80rem;
   width: 100%;
-  margin: 6rem auto 0 auto;
+  margin: 5rem auto 0 auto;
 }
 .search-wrap .search .input-wrap {
   position: sticky;
@@ -130,9 +130,9 @@ img {
   cursor: pointer;
 }
 .search-wrap .search .search-result {
-  margin-top: 1rem;
+  margin-top: 2rem;
   background-color: #ffffff;
-  padding: 4rem 2rem;
+  padding: 2rem;
   border-radius: 1rem;
   border: solid 0.1rem #E8E8E8;
   width: 100%;
@@ -144,8 +144,45 @@ img {
   display: flex;
   gap: 2rem;
 }
-.search-wrap .search .search-result .movie-card img {
+.search-wrap .search .search-result .movie-card .movie-image {
+  height: 100%;
   width: 16rem;
+  display: block;
+  object-fit: cover;
+}
+.search-wrap .search .search-result .movie-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.search-wrap .search .search-result .movie-card .content .title {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.search-wrap .search .search-result .movie-card .content .title .high-light {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.search-wrap .search .search-result .movie-card .content .title .rate-wrap {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.search-wrap .search .search-result .movie-card .content .title .rate-wrap .icon-start {
+  fill: #ffffff;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+.search-wrap .search .search-result .movie-card .content .title .rate-wrap .rate {
+  color: #c8c8c8;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.search-wrap .search .search-result .movie-card .content .title .rate-wrap .rate .current-point {
+  color: #5883FF;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .search-wrap .search .search-result .movie-card .content .info {
   display: flex;
@@ -156,11 +193,40 @@ img {
   display: inline;
   gap: 1rem;
 }
+.search-wrap .search .search-result .movie-card .content .info .row .feature .key {
+  font-weight: 600;
+}
+.search-wrap .search .search-result .movie-card .content .info .row .link {
+  color: #808080;
+  text-decoration: underline;
+}
+.search-wrap .search .search-result .movie-card .content .btn-watch-later {
+  color: #5883FF;
+  height: 4rem;
+  width: 16rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  border: solid 0.1rem #5883FF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.search-wrap .search .search-result .movie-card .content .btn-watch-later:hover {
+  background-color: #5883FF;
+  color: #ffffff;
+}
 .search-wrap .search .search-result .line {
   height: 0.2rem;
   width: 100%;
   background-color: #E8E8E8;
   border: none;
+}
+.search-wrap .search .search-result .more-results {
+  color: #5883FF;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .header {
