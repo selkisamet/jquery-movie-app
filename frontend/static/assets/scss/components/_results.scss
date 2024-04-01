@@ -1,0 +1,26 @@
+.list-wrap {
+    padding-bottom: 5rem;
+
+    .result-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2rem;
+        margin-top: 5rem;
+        border-bottom: solid 0.2rem $primary-color;
+        padding-bottom: 2rem;
+
+        .result-title {
+            color: $primary-color;
+        }
+    }
+
+    .movie-results {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        @include movie-card;
+    }
+}

@@ -1,0 +1,97 @@
+@mixin movie-card {
+    .movie-card {
+        display: flex;
+        gap: 2rem;
+
+        .movie-image {
+            height: 100%;
+            width: 16rem;
+            display: block;
+            object-fit: cover;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+
+            .title {
+                font-size: 2.4rem;
+                font-weight: 500;
+
+                .high-light {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+
+                .rate-wrap {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    .icon-start {
+                        fill: transparent;
+                        height: 1.6rem;
+                        width: 1.6rem;
+                        cursor: pointer;
+                        stroke-width: 0.4rem;
+                        stroke: $primary-color;
+                    }
+
+                    .rate {
+                        color: #c8c8c8;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+
+                        .current-point {
+                            color: $primary-color;
+                            font-size: 2rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+
+
+                .row {
+                    display: inline;
+                    gap: 1rem;
+
+                    .feature {
+                        .key {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .link {
+                        color: $second-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .btn-watch-later {
+                color: $primary-color;
+                height: 4rem;
+                width: 16rem;
+                background-color: $white-color;
+                border: none;
+                border-radius: 0.6rem;
+                font-weight: 600;
+                border: solid 0.1rem $primary-color;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

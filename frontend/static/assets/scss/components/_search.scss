@@ -1,0 +1,81 @@
+.search-wrap {
+    position: relative;
+    min-height: calc(100vh - 10.6rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+
+    .search {
+        max-width: 80rem;
+        width: 100%;
+        margin: 5rem auto 0 auto;
+
+        .input-wrap {
+            position: sticky;
+            top: 16rem;
+
+
+            .input-search {
+                background-color: $white-color;
+                height: 7rem;
+                width: 100%;
+                border-radius: 1rem;
+                border: solid 0.1rem #E8E8E8;
+                padding-left: 2rem;
+                font-size: 1.6rem;
+
+
+                &::placeholder {
+                    color: #C8C8C8;
+                }
+
+                &:focus {
+                    outline: none;
+                    border: solid 0.1rem #C8C8C8;
+                }
+            }
+
+            .icon-search {
+                width: 3rem;
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translate(0, -50%);
+                cursor: pointer;
+            }
+        }
+
+        .search-result {
+            margin-top: 2rem;
+            background-color: $white-color;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: solid 0.1rem #E8E8E8;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @include movie-card;
+
+            .line {
+                height: 0.2rem;
+                width: 100%;
+                background-color: #E8E8E8;
+                border: none;
+            }
+
+            .more-results {
+                color: $primary-color;
+                text-align: center;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
