@@ -1,5 +1,9 @@
 import Home from "./views/Home.js";
 import SearchResults from "./views/SearchResults.js";
+import "./calendar.js";
+import "./favorites.js";
+import "./movie-results.js";
+import "./search-movie.js";
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 

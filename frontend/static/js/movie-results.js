@@ -92,8 +92,6 @@ $(document).ready(function () {
                             }
                         });
                     }
-                } else {
-                    console.log("Film bulunamadı.");
                 }
             },
             error: function (err) {

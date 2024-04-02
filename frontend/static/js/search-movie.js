@@ -76,7 +76,6 @@ $(document).ready(function () {
                                 DAHA FAZLA SONUÇ
                             </a>`);
                 } else {
-                    console.log("Film bulunamadı.");
                     $(".search-result").empty(); // Önceki sonuçları temizle
                     $(".search-result").hide(); // Veri olmadığı için divi gizle
                 }
