@@ -14,7 +14,7 @@ export default class extends AbstractView {
                     <div class="search">
                         <div class="input-wrap">
                             <input type="text" class="input-search"
-                                placeholder="Bulmak istediğiniz filmin adını yazınız.">
+                                placeholder="Bulmak istediğiniz filmin adını yazınız." autofocus>
                                 <img src="static/assets/icons/icon-search.svg" class="icon-search" alt="Ara">
                                 </div>
 

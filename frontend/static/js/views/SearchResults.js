@@ -11,8 +11,8 @@ export default class extends AbstractView {
             <div class="container">
                 <div class="list-wrap">
                     <header class="result-header">
-                        <div class="result-title">Batman İçin Sonuçlar</div>
-                        <div class="result-count">10 Sonuç Bulundu</div>
+                        <div class="result-title"></div>
+                        <div class="result-count"></div>
                     </header>
                     <div class="movie-results">
                     </div>

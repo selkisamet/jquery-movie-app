@@ -24,8 +24,13 @@
 
                         <div class="favorites">
                             <img src="static/assets/icons/icon-star.svg" class="icon-favorite" alt="Favori">
-                            <div class="text">Favori Filmlerim</div>
-                            <div class="count-badge">5</div>
+                            <!-- <div class="text">Favori Filmlerim</div> -->
+                            <div class="dropdown-favorite">
+                                <button class="dropdown-toggle">Favori Filmlerim</button>
+                                <div class="dropdown-content">
+                                </div>
+                            </div>
+                            <div class="favorite-count">0</div>
                         </div>
                     </div>
                 </div>
@@ -42,9 +47,18 @@
 
 
     <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/favorites.js"></script>
     <script src="static/js/search-movie.js"></script>
     <script src="static/js/movie-results.js"></script>
     <script type="module" src="static/js/index.js"></script>
+
+    <script>
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 100) {
+                alert("sasasa")
+            }
+        }
+    </script>
 
 </body>
 

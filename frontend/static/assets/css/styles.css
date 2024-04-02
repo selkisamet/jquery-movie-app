@@ -57,6 +57,16 @@ body {
   max-width: 100%;
   background-color: #f8f8f8;
 }
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: #5883FF;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
 
 .app-wrap {
   height: 100vh;
@@ -149,11 +159,12 @@ img {
   width: 16rem;
   display: block;
   object-fit: cover;
+  border-radius: 1rem;
 }
 .search-wrap .search .search-result .movie-card .content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 .search-wrap .search .search-result .movie-card .content .title {
   font-size: 2.4rem;
@@ -167,14 +178,17 @@ img {
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-top: 1rem;
 }
-.search-wrap .search .search-result .movie-card .content .title .rate-wrap .icon-start {
+.search-wrap .search .search-result .movie-card .content .title .rate-wrap .icon-star {
   fill: transparent;
-  height: 1.6rem;
   width: 1.6rem;
   cursor: pointer;
   stroke-width: 0.4rem;
   stroke: #5883FF;
+}
+.search-wrap .search .search-result .movie-card .content .title .rate-wrap .icon-star.active {
+  fill: #5883FF;
 }
 .search-wrap .search .search-result .movie-card .content .title .rate-wrap .rate {
   color: #c8c8c8;
@@ -189,7 +203,7 @@ img {
 .search-wrap .search .search-result .movie-card .content .info {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 .search-wrap .search .search-result .movie-card .content .info .row {
   display: inline;
@@ -241,7 +255,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2rem;
   margin-top: 5rem;
   border-bottom: solid 0.2rem #5883FF;
   padding-bottom: 2rem;
@@ -255,6 +268,18 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
+@media screen and (max-aspect-ratio: 13/9) and (max-width: 768px) {
+  .list-wrap .movie-results {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+@media screen and (min-aspect-ratio: 13/9) and (max-width: 768px) {
+  .list-wrap .movie-results {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
 .list-wrap .movie-results .movie-card {
   display: flex;
   gap: 2rem;
@@ -264,11 +289,12 @@ img {
   width: 16rem;
   display: block;
   object-fit: cover;
+  border-radius: 1rem;
 }
 .list-wrap .movie-results .movie-card .content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 .list-wrap .movie-results .movie-card .content .title {
   font-size: 2.4rem;
@@ -282,14 +308,17 @@ img {
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-top: 1rem;
 }
-.list-wrap .movie-results .movie-card .content .title .rate-wrap .icon-start {
+.list-wrap .movie-results .movie-card .content .title .rate-wrap .icon-star {
   fill: transparent;
-  height: 1.6rem;
   width: 1.6rem;
   cursor: pointer;
   stroke-width: 0.4rem;
   stroke: #5883FF;
+}
+.list-wrap .movie-results .movie-card .content .title .rate-wrap .icon-star.active {
+  fill: #5883FF;
 }
 .list-wrap .movie-results .movie-card .content .title .rate-wrap .rate {
   color: #c8c8c8;
@@ -304,7 +333,7 @@ img {
 .list-wrap .movie-results .movie-card .content .info {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 .list-wrap .movie-results .movie-card .content .info .row {
   display: inline;
@@ -357,14 +386,55 @@ img {
   gap: 1rem;
   cursor: pointer;
 }
-.header .navbar .navbar-content .favorites:hover ::after {
-  content: "";
+.header .navbar .navbar-content .favorites:hover .dropdown-favorite .dropdown-content {
+  display: block;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-toggle {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-content {
+  display: none;
   position: absolute;
-  width: 100%;
-  height: 0.4rem;
-  background-color: #ffffff;
-  bottom: -1rem;
+  max-height: 30rem;
+  width: 120%;
+  z-index: 1;
+  padding-top: 3.3rem;
   left: 0;
+  overflow-y: scroll;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-content::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-content::-webkit-scrollbar-track {
+  background-color: #5883FF;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-content::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-content .favorite-item {
+  color: #ffffff;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+  background-color: #5883FF;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-content .favorite-item .favorite-image {
+  width: 4rem;
+  border-radius: 0.5rem;
+}
+.header .navbar .navbar-content .favorites .dropdown-favorite .dropdown-content .favorite-item:hover {
+  background-color: #3f70ff;
 }
 .header .navbar .navbar-content .favorites .text {
   color: #ffffff;
@@ -374,7 +444,7 @@ img {
   width: 2rem;
   margin-top: -0.4rem;
 }
-.header .navbar .navbar-content .favorites .count-badge {
+.header .navbar .navbar-content .favorites .favorite-count {
   color: #ffffff;
   height: 2rem;
   width: 2rem;

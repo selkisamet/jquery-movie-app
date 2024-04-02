@@ -8,12 +8,13 @@
             width: 16rem;
             display: block;
             object-fit: cover;
+            border-radius: 1rem;
         }
 
         .content {
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 2rem;
 
             .title {
                 font-size: 2.4rem;
@@ -28,14 +29,18 @@
                     display: flex;
                     gap: 1rem;
                     align-items: center;
+                    margin-top: 1rem;
 
-                    .icon-start {
+                    .icon-star {
                         fill: transparent;
-                        height: 1.6rem;
                         width: 1.6rem;
                         cursor: pointer;
                         stroke-width: 0.4rem;
                         stroke: $primary-color;
+
+                        &.active {
+                            fill: $primary-color;
+                        }
                     }
 
                     .rate {
@@ -55,7 +60,7 @@
             .info {
                 display: flex;
                 flex-direction: column;
-                gap: 4rem;
+                gap: 2rem;
 
 
                 .row {
