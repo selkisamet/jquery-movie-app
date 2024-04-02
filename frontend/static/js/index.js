@@ -48,9 +48,9 @@ const router = async () => {
 window.addEventListener("popstate", router);
 
 window.onpopstate = function () {
-    $('.input-search').val(''); // Input değerini temizle
-    $('.search-result').empty(); // Arama sonuçlarını temizle
-    $('.search-result').hide(); // Arama sonuçlarını gizle
+    $(".input-search").val(""); // Input değerini temizle
+    $(".search-result").empty(); // Arama sonuçlarını temizle
+    $(".search-result").hide(); // Arama sonuçlarını gizle
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -62,4 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     router();
+
+    $(document).on("click", ".btn-watch-later", function () {
+        $(".modal-overlay").addClass("active");
+    });
+
+    $(".btn-close").on("click", function () {
+        $(".modal-overlay").removeClass("active");
+    });
 });

@@ -18,7 +18,9 @@
         margin-top: 5rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 6rem;
+
 
         @include for-medium-phone-portrait {
             grid-template-columns: 1fr;

@@ -70,6 +70,110 @@ body::-webkit-scrollbar-thumb {
 
 .app-wrap {
   height: 100vh;
+  position: relative;
+}
+.app-wrap .modal-overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.app-wrap .modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.app-wrap .modal-overlay .calendar {
+  width: 100%;
+  width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.app-wrap .modal-overlay .calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.app-wrap .modal-overlay .calendar .header .calendar-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.app-wrap .modal-overlay .calendar .header .btn-nav {
+  color: #ffffff;
+  height: 2rem;
+  width: 2rem;
+  background-color: #5883FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.app-wrap .modal-overlay .calendar .days {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.app-wrap .modal-overlay .calendar .days .day {
+  color: #5883FF;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 2rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: solid 0.1rem transparent;
+  font-weight: 500;
+}
+.app-wrap .modal-overlay .calendar .days .day:hover {
+  background-color: #f1f5ff;
+  border: solid 0.1rem #5883FF;
+}
+.app-wrap .modal-overlay .calendar .days .day.current {
+  color: #ffffff;
+  background-color: #5883FF;
+}
+.app-wrap .modal-overlay .calendar .action-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+.app-wrap .modal-overlay .calendar .action-buttons .btn-action {
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.app-wrap .modal-overlay .calendar .action-buttons .btn-action.btn-add {
+  background-color: #5883FF;
+}
+.app-wrap .modal-overlay .calendar .action-buttons .btn-action.btn-add:hover {
+  background-color: #255dff;
+}
+.app-wrap .modal-overlay .calendar .action-buttons .btn-action.btn-close {
+  background-color: #cc0000;
+}
+.app-wrap .modal-overlay .calendar .action-buttons .btn-action.btn-close:hover {
+  background-color: #990000;
 }
 
 .container {
@@ -77,6 +181,13 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   margin: 0 auto;
   padding: 0 4rem;
+}
+
+.line {
+  height: 0.2rem;
+  width: 100%;
+  background-color: #E8E8E8;
+  border: none;
 }
 
 a {
@@ -232,12 +343,6 @@ img {
   background-color: #5883FF;
   color: #ffffff;
 }
-.search-wrap .search .search-result .line {
-  height: 0.2rem;
-  width: 100%;
-  background-color: #E8E8E8;
-  border: none;
-}
 .search-wrap .search .search-result .more-results {
   color: #5883FF;
   text-align: center;
@@ -266,7 +371,8 @@ img {
   margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 6rem;
 }
 @media screen and (max-aspect-ratio: 13/9) and (max-width: 768px) {
   .list-wrap .movie-results {

@@ -14,6 +14,7 @@ export default class extends AbstractView {
                         <div class="result-title"></div>
                         <div class="result-count"></div>
                     </header>
+
                     <div class="movie-results">
                     </div>
                 </div>

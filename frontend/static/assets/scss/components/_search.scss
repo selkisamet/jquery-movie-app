@@ -59,13 +59,6 @@
 
             @include movie-card;
 
-            .line {
-                height: 0.2rem;
-                width: 100%;
-                background-color: #E8E8E8;
-                border: none;
-            }
-
             .more-results {
                 color: $primary-color;
                 text-align: center;

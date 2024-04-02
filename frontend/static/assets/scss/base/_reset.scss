@@ -37,6 +37,127 @@ body {
 
 .app-wrap {
     height: 100vh;
+    position: relative;
+
+    .modal-overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        .calendar {
+            width: 100%;
+            width: 70rem;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                .calendar-title {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                .btn-nav {
+                    color: $white-color;
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    border-radius: 0.4rem;
+                    cursor: pointer;
+                }
+            }
+
+            .days {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+                flex-wrap: wrap;
+
+                .day {
+                    color: #5883FF;
+                    flex: 1;
+                    background-color: #ffffff;
+                    padding: 2rem 0;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    border: solid 0.1rem transparent;
+                    font-weight: 500;
+
+                    &:hover {
+                        background-color: lighten($primary-color, 30%);
+                        border: solid 0.1rem $primary-color;
+                    }
+
+                    &.current {
+                        color: #ffffff;
+                        background-color: #5883FF;
+                    }
+                }
+            }
+
+            .action-buttons {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: flex-end;
+
+                .btn-action {
+                    color: $white-color;
+                    padding: 1rem 2rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &.btn-add {
+                        background-color: $primary-color;
+
+                        &:hover {
+                            background-color: darken($primary-color, 10%);
+                        }
+                    }
+
+                    &.btn-close {
+                        background-color: #cc0000;
+
+                        &:hover {
+                            background-color: darken(#cc0000, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .container {
@@ -44,6 +165,13 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 4rem;
+}
+
+.line {
+    height: 0.2rem;
+    width: 100%;
+    background-color: #E8E8E8;
+    border: none;
 }
 
 a {

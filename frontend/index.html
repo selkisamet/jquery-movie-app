@@ -41,6 +41,21 @@
         <section id="app">
         </section>
 
+        <div class="modal-overlay">
+            <div class="calendar">
+                <div class="header">
+                    <button class="btn-nav prev">&#10094;</button>
+                    <h2 class="calendar-title"></h2>
+                    <button class="btn-nav next">&#10095;</button>
+                </div>
+                <div class="days"></div>
+                <hr class="line">
+                <div class="action-buttons">
+                    <button class="btn-action btn-add">Ekle</button>
+                    <button class="btn-action btn-close">İptal</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -50,15 +65,8 @@
     <script src="static/js/favorites.js"></script>
     <script src="static/js/search-movie.js"></script>
     <script src="static/js/movie-results.js"></script>
+    <script src="static/js/calendar.js"></script>
     <script type="module" src="static/js/index.js"></script>
-
-    <script>
-        window.onscroll = function () {
-            if (document.documentElement.scrollTop > 100) {
-                alert("sasasa")
-            }
-        }
-    </script>
 
 </body>
 
