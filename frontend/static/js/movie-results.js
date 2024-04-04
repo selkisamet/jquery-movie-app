@@ -80,7 +80,7 @@ $(document).ready(function () {
                                                 </div>
                                                 <div class="row"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lorem dolor. Ut lacinia ornare consequat. Aenean euismod nibh in eleifend rutrum. <a href="#" class="link">Detaylar</a></div>
                                             </section>
-                                            <button class="btn-watch-later">Daha Sonra İzle</button>
+                                            <button class="btn-watch-later" data-movie-id="${movie.imdbID}" data-movie-title="${movie.Title}" data-movie-poster="${movie.Poster}">Daha Sonra İzle</button>
                                         </div>
                                     </div>
                                 `;
@@ -111,6 +111,15 @@ $(document).ready(function () {
         };
         toggleMovieFavorite(movie);
         $(this).toggleClass('active');
+    });
+
+    $(document).on('click', '.btn-watch-later', function () {
+        $(".modal-overlay").addClass("active");
+        localStorage.setItem('selectedMovie', JSON.stringify({
+            imdbID: $(this).data('movie-id'),
+            Title: $(this).data('movie-title'),
+            Poster: $(this).data('movie-poster')
+        }));
     });
 });
 
