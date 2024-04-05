@@ -104,7 +104,7 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   position: relative;
 }
-.app-wrap .modal-overlay .calendar .modal {
+.app-wrap .modal-overlay .calendar .calendar-modal {
   display: none;
   position: absolute;
   z-index: 1;
@@ -115,7 +115,7 @@ body::-webkit-scrollbar-thumb {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.app-wrap .modal-overlay .calendar .modal .modal-content {
+.app-wrap .modal-overlay .calendar .calendar-modal .modal-content {
   color: #5883FF;
   background-color: #ffffff;
   padding: 20px;
@@ -634,6 +634,50 @@ img {
   border: solid 0.1rem #ffffff;
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+#cookie-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+}
+#cookie-overlay .cookie-content {
+  color: #ffffff;
+  background-color: #5883FF;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+#cookie-overlay .cookie-content .actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+#cookie-overlay .cookie-content .actions .btn-action {
+  color: #ffffff;
+  background-color: transparent;
+  height: 4rem;
+  border: solid 0.1rem #ffffff;
+  width: 10rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+#cookie-overlay .cookie-content .actions .btn-action:hover {
+  color: #5883FF;
+  background-color: #ffffff;
 }
 
 @media screen and (max-aspect-ratio: 13/9) and (max-width: 1180px) {

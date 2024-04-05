@@ -103,22 +103,22 @@ $(document).ready(function () {
         $(".movie-results").append(`<h1>ARAMA YAPMADINIZ</h1> <br> <h2><a href='/'>Arama Sayfasına Dön</a><h2>`);
     }
 
-    $(document).on('click', '.icon-star', function () {
+    $(document).on("click", ".icon-star", function () {
         let movie = {
-            imdbID: $(this).data('movie-id'),
-            Title: $(this).data('movie-title'),
-            Poster: $(this).data('movie-poster')
+            imdbID: $(this).data("movie-id"),
+            Title: $(this).data("movie-title"),
+            Poster: $(this).data("movie-poster")
         };
         toggleMovieFavorite(movie);
-        $(this).toggleClass('active');
+        $(this).toggleClass("active");
     });
 
-    $(document).on('click', '.btn-watch-later', function () {
+    $(document).on("click", ".btn-watch-later", function () {
         $(".modal-overlay").addClass("active");
-        localStorage.setItem('selectedMovie', JSON.stringify({
-            imdbID: $(this).data('movie-id'),
-            Title: $(this).data('movie-title'),
-            Poster: $(this).data('movie-poster')
+        localStorage.setItem("selectedMovie", JSON.stringify({
+            imdbID: $(this).data("movie-id"),
+            Title: $(this).data("movie-title"),
+            Poster: $(this).data("movie-poster")
         }));
     });
 });

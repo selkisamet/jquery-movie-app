@@ -18,7 +18,7 @@ $(document).ready(function () {
     // İlk çalıştırma
     updateFavoriteCount();
 
-    $(document).on('click', '.icon-star', function () {
+    $(document).on("click", ".icon-star", function () {
 
         setTimeout(function () {
             updateFavoriteCount();
